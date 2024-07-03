@@ -2,7 +2,7 @@
 This is my personal website. I'm not a skilled designer, but I wanted to make something unique and nostalgic. Hopefully you'll get a laugh out of it.
 
 # To-do
-- Add CNAME file for custom domain
+- ~~Add CNAME file for custom domain~~
 - Update depricated cursor trail code
 - Add Education section
 - Add Skills section
