@@ -22,44 +22,30 @@ colours = new Array('#ff0000', '#00ff00', '#ffffff', '#ff00ff', '#ffa500', '#fff
 n = 10;
 y = 0;
 x = 0;
-n6 = (document.getElementById && !document.all);
-ns = (document.layers);
-ie = (document.all);
-d = (ns || ie) ? 'document.' : 'document.getElementById("';
-a = (ns || n6) ? '' : 'all.';
-n6r = (n6) ? '")' : '';
-s = (ns) ? '' : '.style';
 
-if (ns) {
-    for (i = 0; i < n; i++)
-        document.write('<layer name="dots' + i + '" top=0 left=0 width=' + i / 2 + ' height=' + i / 2 + ' bgcolor=#ff0000></layer>');
-}
+d = 'document.getElementById("';
+a = '';
+n6r = '")'
+s = '.style';
 
-if (ie)
-    document.write('<div id="con" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
 
-if (ie || n6) {
-    for (i = 0; i < n; i++)
-        document.write('<div id="dots' + i + '" style="position:absolute;top:0px;left:0px;width:' + i / 2 + 'px;height:' + i / 2 + 'px;background:#ff0000;font-size:' + i / 2 + '"></div>');
-}
 
-if (ie)
-    document.write('</div></div>');
-(ns || n6) ? window.captureEvents(Event.MOUSEMOVE) : 0;
+for (i = 0; i < n; i++)
+    document.write('<div id="dots' + i + '" style="position:absolute;top:0px;left:0px;width:' + i / 2 + 'px;height:' + i / 2 + 'px;background:#ff0000;font-size:' + i / 2 + '"></div>');
+
+
 
 function Mouse(evnt) {
 
-    y = (ns || n6) ? evnt.pageY + 4 - window.pageYOffset : event.y + 4;
-    x = (ns || n6) ? evnt.pageX + 1 : event.x + 1;
+    y = evnt.pageY + 4 - window.scrollY
+    x = evnt.pageX + 1
 }
 
-(ns) ? window.onMouseMove = Mouse : document.onmousemove = Mouse;
+document.onmousemove = Mouse;
 
 function animate() {
 
-    o = (ns || n6) ? window.pageYOffset : 0;
-
-    if (ie) con.style.top = document.body.scrollTop + 'px';
+    o = window.scrollY
 
     for (i = 0; i < n; i++) {
 
@@ -67,7 +53,7 @@ function animate() {
 
         randcolours = colours[Math.floor(Math.random() * colours.length)];
 
-        (ns) ? temp1.bgColor = randcolours : temp1.background = randcolours;
+        temp1.background = randcolours;
 
         if (i < n - 1) {
 
@@ -214,16 +200,16 @@ function mouse(e) {
     }
     else {
         set_scroll();
-        y = event.y + sdown;
-        x = event.x + sleft;
+        y = window.Event.y + sdown;
+        x = window.Event.x + sleft;
     }
 }
 
 window.onscroll = set_scroll;
 function set_scroll() {
-    if (typeof (self.pageYOffset) == 'number') {
-        sdown = self.pageYOffset;
-        sleft = self.pageXOffset;
+    if (typeof (self.scrollY) == 'number') {
+        sdown = self.scrollY;
+        sleft = self.scollY;
     }
     else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
         sdown = document.body.scrollTop;
