@@ -96,18 +96,24 @@ html {
     }
 
     .about-modal-content {
-        position: relative;
+        position: absolute;
         background-color: #c0c0c0;
         top: 80px;
+        left: 10%;
+        right: 10%;
         margin-left: auto;
         margin-right: auto;
         height: 80%;
         width: 80%;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-right: 2px ridge #828386;
+        border-bottom: 2px ridge #828386;
     }
 
     .about-modal-header {
         background-color: #000080;
-        position: relative;
+        position: sticky;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -118,6 +124,7 @@ html {
         left: 0;
         width: 100%;
         max-width: 100%;
+        z-index: 2;
     }
 
     .about-modal-header>p {
@@ -131,14 +138,15 @@ html {
 
     .about-modal-body {
         position: relative;
+        max-height: 94%;
+        height: 100%;
         display: flex;
         width: 100%;
         flex-direction: column;
         align-content: center;
         background-color: #c0c0c0;
-        border-top: 1px solid white;
-        border-left: 1px solid white;
         color: black;
+        overflow-y: scroll;
     }
 
     .about-modal-body > * {
