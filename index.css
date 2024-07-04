@@ -81,8 +81,14 @@ html {
         border-bottom: 1px solid white;
     }
 
+    #open-about>i {
+        color: #000080;
+        margin-bottom: 2px
+    }
+
     nav>a>i {
         color: #000080;
+        margin-bottom: 2px
     }
 
     #about-modal {
