@@ -206,6 +206,7 @@ html {
         max-width: 99%;
         margin-top: 60px;
         background-image: url("assets/cloudyblues.jpg");
+        background-attachment: fixed;
         color: black;
     }
 
