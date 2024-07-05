@@ -36,7 +36,6 @@ for (i = 0; i < n; i++)
 
 
 function Mouse(evnt) {
-
     y = evnt.pageY + 4 - window.scrollY
     x = evnt.pageX + 1
 }
@@ -193,6 +192,18 @@ function update_tiny(i) {
 }
 
 document.onmousemove = mouse;
+function mouse(e) {
+    if (e) {
+        y = e.pageY;
+        x = e.pageX;
+    }
+    else {
+        set_scroll();
+        y = window.Event.y + sdown;
+        x = window.Event.x + sleft;
+    }
+}
+
 
 window.onscroll = set_scroll;
 function set_scroll() {
