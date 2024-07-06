@@ -93,7 +93,7 @@ nav>a>i {
 }
 
 #about-modal {
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -242,8 +242,70 @@ section {
     margin-left: 3px;
 }
 
+.education-content {
+    padding: 16px;
+}
 
-@media only screen and (min-width: 480px){
+.skills-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.skills-content>*>ul {
+    padding-left: 16px;
+}
+
+.tools-n-frameworks>ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.experience-content {
+    padding: 16px;
+}
+
+.experience-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.experience-date>p {
+    text-wrap: nowrap;
+    margin-right: 16px;
+    margin-top: 0;
+}
+
+.experience-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-description>h4 {
+    margin-top: 2px;
+    margin-bottom: 0px
+}
+
+.experience-description>p {
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+.experience-description>ul {
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+
+.experience-description>ul>li {
+    list-style-type: square;
+}
+
+@media only screen and (min-width: 480px) {
     #nav-home::after {
         content: "Home";
     }
@@ -267,12 +329,12 @@ section {
     #open-about::after {
         content: "About";
     }
-    
+
 }
 
 @media only screen and (max-width: 480px) {
 
-    nav > *  {
+    nav>* {
         content: none;
     }
 }
