@@ -283,6 +283,8 @@ section {
 .experience-description {
     display: flex;
     flex-direction: column;
+    max-width: 50%;
+    width: 100%;
 }
 
 .experience-description>h4 {
