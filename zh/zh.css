@@ -1,0 +1,26 @@
+@media only screen and (min-width: 480px) {
+    #nav-home::after {
+        content: "首页";
+    }
+
+    #nav-ed::after {
+        content: "教育";
+    }
+
+    #nav-skills::after {
+        content: "技能并认证";
+    }
+
+    #nav-exp::after {
+        content: "工作经验";
+    }
+
+    #nav-proj::after {
+        content: "爱好和项目";
+    }
+
+    #open-about::after {
+        content: "自我介绍";
+    }
+
+}
