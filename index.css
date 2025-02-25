@@ -371,6 +371,10 @@ section {
         content: "About";
     }
 
+    #language-switcher::after {
+        content: "中文";
+    }
+
 }
 
 @media only screen and (max-width: 480px) {

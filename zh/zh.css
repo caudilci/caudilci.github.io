@@ -23,4 +23,8 @@
         content: "自我介绍";
     }
 
+    #language-switcher::after {
+        content: "English";
+    }
+
 }
