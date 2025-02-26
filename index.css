@@ -63,6 +63,11 @@ nav>a:active {
     max-height: 52.5px;
 }
 
+#open-about>i {
+    color: #000080;
+    margin-bottom: 2px
+}
+
 button {
     color: black;
     background-color: #c0c0c0;
@@ -74,6 +79,15 @@ button {
     font-size: 14px;
 }
 
+button:disabled {
+    color: #808080;
+}
+
+button:disabled>i {
+    color: #808080 !important;
+    
+}
+
 button:active {
     background-color: #c0c0c0;
     border-top: 2px groove #828386;
@@ -82,9 +96,12 @@ button:active {
     border-bottom: 1px solid white;
 }
 
-#open-about>i {
-    color: #000080;
-    margin-bottom: 2px
+button:disabled:active {
+    background-color: #c0c0c0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 2px ridge #828386;
+    border-bottom: 2px ridge #828386;
 }
 
 nav>a>i {

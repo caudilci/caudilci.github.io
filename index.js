@@ -76,10 +76,12 @@ window.onload = function () {
 
     openBtn.onclick = function () {
         modal.style.display = "flex";
+        openBtn.disabled = true;
     }
 
     closeBtn.onclick = function () {
         modal.style.display = "none";
+        openBtn.disabled = false;
     }
 
     window.onclick = function (event) {
