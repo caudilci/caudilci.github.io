@@ -3,6 +3,28 @@ html {
     font-family: Georgia;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #c0c0c0 #f3f3f3;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f3f3f3;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    border: 10px solid #828386;
+  }
+
 
 nav {
     position: fixed;
@@ -162,7 +184,7 @@ nav>a>i {
 
 .about-modal-body {
     position: relative;
-    max-height: 94%;
+    max-height: calc(100% - 32px);
     height: 100%;
     display: flex;
     width: 100%;
