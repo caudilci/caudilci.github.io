@@ -130,7 +130,7 @@ nav>a>i {
 }
 
 #about-modal {
-    display: none;
+    display: flex;
     position: fixed;
     z-index: 2;
     top: 0;
